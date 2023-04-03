@@ -1,0 +1,79 @@
+var cookieBannerSliderPos = 0;
+
+function showCookieBanner() {
+    var cookiebanner = document.getElementById("cookiebanner");
+    var dialogHeight = parseInt(cookiebanner.offsetHeight);
+    cookiebanner.style.bottom = (cookieBannerSliderPos - dialogHeight) + "px";
+    cookieBannerSliderPos += 4;
+    if (cookieBannerSliderPos < dialogHeight) {
+        setTimeout(function () {
+            showCookieBanner();
+        }, 1);
+    } else {
+        cookieBannerSliderPos = 0;
+        cookiebanner.style.bottom = "0px";
+    }
+}
+
+function hideCookieBanner() {
+    var cookiebanner = document.getElementById("cookiebanner");
+    cookiebanner.style.display = "none";
+}
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+jQuery(document).ready(function($){
+$("#cookiebanner .customize-link").click(function () {
+  $("#customizeCookie").addClass("show");
+  $(".header + div").addClass("show");
+  $("body").addClass("modal-open");
+
+});
+$("#customizeCookie .close").click(function () {
+  $("#customizeCookie").removeClass("show");
+  $(".header + div").removeClass("show");
+  $("body").removeClass("modal-open");
+
+});
+
+//$("#cookiebanner .close .fa").click(function(){
+    //$("#cookiebanner").addClass("hide");
+  //});
+
+   $("#customizeCookie .action-btn .btn").click(function(){
+    $("#cookiebanner").addClass("hide");
+     $("#customizeCookie").removeClass("show");
+    $(".header + div").removeClass("show");
+     $("body").removeClass("modal-open");
+   });
+
+$('.faq-trigger').click(function () {
+  $('.collapse').removeClass('currentFaq');
+  $(this).closest('.cookie-card').find('.collapse').addClass('currentFaq');
+  $('.collapse').not('.currentFaq').slideUp();
+  $('.currentFaq').slideToggle();
+ 
+});
+
+$("#accordionExample").on("click", ".faq-trigger", function () {
+  $("#accordionExample .faq-trigger.opened").removeClass("opened");
+  $(this).addClass("opened");
+});
+
+ $("#accordionExample").on("click", ".faq-trigger.opened", function () {
+    $(this).removeClass("opened");
+  });
+
+});
+
+

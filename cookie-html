@@ -1,0 +1,132 @@
+<div id="cokiebot-banner">
+  <div class="row">
+    <div class="columns small-12">
+      <div id="cookiebanner" lang="[#LANGUAGE#]" dir="[#TEXTDIRECTION#]" ng-non-bindable>
+        <div id="c-left">
+          <p class="c-message">[#TEXT#] <span class="policy-link"><a href="/cookie-policy" target="_blank">Cookie Notice</a>, <a href="/privacy-policy" target="_blank">Privacy Notice</a>.</span></p>
+        </div>
+        <div id="c-right">
+          <div class="action-btn">
+            <button id="CybotCookiebotDialogBodyButtonDecline" data-track='{"event":"click"}' class="button btn btn-outline">Deny All</button>
+            <button id="CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll" data-track='{"event":"click"}' class="button btn btn-primary">
+            Allow All</button>
+          </div>
+          <a href="javascript:void(0)" class="customize-link">Customize <i class="fa fa-angle-right"></i></a>
+        </div>
+        <div class="close show-for-small-only d-md-none">
+          <i class="fa fa-close fa-times" id="CybotCookiebotDialogBodyLevelButtonAccept" data-track='{"event":"click"}'></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="customizeCookie" class="overlay">
+  <div class="popup">
+    <div class="popup-box">
+      <div class="head-wrap">
+        <div class="head-box">
+          <img src="https://emeritus.org/wp-content/uploads/2023/04/icon.png" />
+          <h4 class="title">Cookies & Privacy Policy</h4>
+        </div>
+        <a class="close" href="javascript:void(0)">×</a>
+      </div>
+      <div class="tab">
+        <a href="javascript:void(0);"  class="tablinks active" onclick="openTab(event, 'Settings')">Settings</a>
+        <a href="javascript:void(0);"  class="tablinks" onclick="openTab(event, 'Policy')">Policy</a>
+      </div>
+      <div class="cookie-tab-content">
+        <div id="Settings" class="tabcontent" style="display: block;">
+          <div class="accordion" id="accordionExample">
+              <div class="cookie-card">
+                <div class="cookie-card-header">
+                  <h2 class="faq-trigger faq-title">
+                    [#COOKIETYPE_NECESSARY_RAW#]
+                  </h2>
+                  <label class="switch">
+                    <input id="CybotCookiebotDialogBodyLevelButtonNecessary" type="checkbox" checked disabled>
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+
+                <div class="collapse" style="display:none;">
+                  <div class="cookie-card-body">
+                   <p>[#COOKIETYPEINTRO_NECESSARY#]</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cookie-card">
+                <div class="cookie-card-header">
+                  <h2 class="faq-trigger faq-title">
+                    [#COOKIETYPE_PREFERENCE_RAW#]
+                  </h2>
+                  <label class="switch">
+                    <input id="CybotCookiebotDialogBodyLevelButtonPreferences" type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+
+                <div class="collapse" style="display:none;">
+                  <div class="cookie-card-body">
+                   <p>[#COOKIETYPEINTRO_PREFERENCE#]</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cookie-card">
+                <div class="cookie-card-header">
+                  <h2 class="faq-trigger faq-title">
+                    [#COOKIETYPE_STATISTICS_RAW#]
+                  </h2>
+                  <label class="switch">
+                    <input id="CybotCookiebotDialogBodyLevelButtonStatistics" type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+
+                <div class="collapse" style="display:none;">
+                  <div class="cookie-card-body">
+                   <p>[#COOKIETYPEINTRO_STATISTICS#]</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cookie-card">
+                <div class="cookie-card-header">
+                  <h2 class="faq-trigger faq-title">
+                    [#COOKIETYPE_ADVERTISING_RAW#]
+                  </h2>
+                  <label class="switch">
+                    <input id="CybotCookiebotDialogBodyLevelButtonMarketing" type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+
+                <div class="collapse" style="display:none;">
+                  <div class="cookie-card-body">
+                   <p>[#COOKIETYPEINTRO_ADVERTISING#]</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+            <div id="Policy" class="tabcontent">
+            <p>When you visit any web site, it may store or retrieve information on your browser, mostly in the form of cookies. This information might be about you, your preferences or your device and is mostly used to make the site work as you expect it to. The information does not usually directly identify you, but it can give you a more personalized web experience.</p><p>
+
+Because we respect your right to privacy, you can choose not to allow some types of cookies. Click on the different category headings to find out more and change our default settings. In some cases, data obtained from cookies is shared with third parties You can exercise your right to opt-out of that sharing at any time by disabling cookies.</p><p>
+
+However, blocking some types of cookies may impact your experience of the site and the services we are able to offer.</p><p>
+
+<a href="/cookie-policy" target="_blank"><u>More information</u></a>
+</p>
+            </div>
+          </div>
+          <div class="action-btn align-right justify-content-end">
+           <!-- <button id="CybotCookiebotDialogBodyLevelButtonLevelOptinDeclineAll" data-track='{"event":"click"}' class="button btn btn-outline">Decline</button>-->
+            <button id="CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection" data-track='{"event":"click"}' class="button btn btn-primary">I
+              Agree</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
